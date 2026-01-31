@@ -1,9 +1,18 @@
 # Notebooks
 
-Curated notebooks for key approaches. These are intended for exploration and reporting, not production runs.
+Curated notebooks for exploration, analysis, and reporting. These are intended for interactive runs rather than production training.
 
-- `analysis/analysis.ipynb` - consolidated analysis summary
-- `bgs/bgs_rgrs_advanced.ipynb` - BGS regression (advanced)
-- `bps/bps_rgrs_advanced.ipynb` - BPS regression (advanced)
-- `bps/bps_classification.ipynb` - BPS classification
-- `pdnn/pdnn_v3.ipynb` - probabilistic PDNN workflow
+## Index
+
+| Notebook | Focus |
+| --- | --- |
+| `analysis/analysis.ipynb` | Consolidated analysis summary |
+| `bgs/bgs_rgrs_advanced.ipynb` | BGS regression (advanced) |
+| `bps/bps_rgrs_advanced.ipynb` | BPS regression (advanced) |
+| `bps/bps_classification.ipynb` | BPS classification |
+| `pdnn/pdnn_v3.ipynb` | Probabilistic PDNN workflow |
+
+## Notes
+
+- Notebooks write outputs to the repo-level `results/` directory.
+- Use a local Python environment with the main project requirements.

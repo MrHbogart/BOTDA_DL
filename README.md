@@ -1,16 +1,16 @@
 # BOTDA_DL
 
-BOTDA deep-learning pipeline for BGS/BPS regression, classical fitting, and probabilistic heads (PDNN). The repo keeps the modern framework clean while preserving legacy baselines for comparison.
+Deep-learning and classical pipelines for Brillouin Optical Time-Domain Analysis (BOTDA), covering BGS/BPS regression, legacy baselines, and probabilistic heads. The codebase keeps modern experiments clean while preserving paper-era implementations for side-by-side comparison.
 
 ## Highlights
 
-- BGS regression with dual outputs (peak + FWHM)
-- BPS regression with peak estimation
-- Legacy paper baselines for side-by-side comparison
+- BGS regression with dual outputs (peak and FWHM)
+- BPS regression with peak estimation and classification variants
+- Legacy baselines retained for reproducibility
 - PDNN experiments and curated notebooks
 - Synthetic data generation workflows (modern + legacy)
 
-## Project Layout
+## Repository layout
 
 ```
 BOTDA_DL/
@@ -28,7 +28,7 @@ BOTDA_DL/
 └── models/                    # Trained models/scalers (created at runtime)
 ```
 
-## Setup
+## Quick start
 
 ```bash
 python -m venv .venv
@@ -42,7 +42,7 @@ pip install -r requirements.txt
 PYTHONPATH=src python main.py
 ```
 
-By default, this runs modern + legacy pipelines and writes artifacts to `results/`.
+By default, this runs modern and legacy pipelines and writes artifacts to `results/`.
 
 ### Skip legacy (faster runs)
 
@@ -52,7 +52,7 @@ PYTHONPATH=src python main.py --skip-legacy
 
 ## PDNN
 
-The PDNN paper implementation lives in `scripts/pdnn_paper.py` and needs extra dependencies:
+The PDNN paper implementation lives in `scripts/pdnn_paper.py` and requires extra dependencies:
 
 ```bash
 pip install -r requirements-pdnn.txt
@@ -60,15 +60,7 @@ pip install -r requirements-pdnn.txt
 
 ## Notebooks
 
-- `notebooks/analysis/` - consolidated analysis
-- `notebooks/pdnn/` - probabilistic PDNN workflows
-- `notebooks/bgs/` - BGS regression notebooks
-- `notebooks/bps/` - BPS regression + classification notebooks
-
-## Data
-
-- `data/BGS.txt`, `data/BPS.txt` are the primary inputs.
-- `data/raw/` contains raw reference files used in notebooks.
+See `notebooks/README.md` for the curated list of analysis and experiment notebooks.
 
 ## Outputs
 
